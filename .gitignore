@@ -1,0 +1,9 @@
+# Pythonのバイトコードファイルを無視
+*.pyc
+__pycache__
+
+# メディアファイルと静的ファイルを無視
+myproject/media/*.avi
+
+# ローカル設定やシークレットキーを無視
+myproject/myproject/settings.py
