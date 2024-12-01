@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  django:
+    build: .
+    container_name: django-container  # コンテナ名
+    ports:
+      - "8000:8000"  # ホストとコンテナのポートマッピング
+    volumes:
+      - .:/app  # ホストのカレントディレクトリをコンテナ内の/appにマウント
+    environment:
+      - PYTHONUNBUFFERED=1  # ログがリアルタイムで表示されるように
+    command: python myproject/manage.py runserver 0.0.0.0:8000  # Django開発サーバーの起動コマンド
